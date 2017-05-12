@@ -1,0 +1,86 @@
+/*
+==================
+Begenning of button area one
+==================
+*/
+a.button::before {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-box-shadow: #FECDFE 0 2px 5px;
+    -moz-box-shadow: #FECDFE 0 2px 5px;
+    border-radius: 3px;
+    box-shadow: #FECDFE 0 2px 5px;
+    width: 100%;
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 2px 0 0;
+}
+    
+a.button:active::before {
+    padding: 1px 0 0;
+}
+
+
+a.button {
+    -moz-box-shadow: inset 0 0 0 1px #3DA3EF;
+    -webkit-box-shadow: inset 0 0 0 1px #3DA3EF;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    background: #66BE91;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#eee), to(#e2e2e2));
+    background: -moz-linear-gradient(#66BE91, #e2e2e2);
+    background: linear-gradient(#66BE91, #e2e2e2);
+    border: solid 1px #d0d0d0;
+    border-bottom: solid 3px #b2b1b1;
+    border-radius: 3px;
+    box-shadow: inset 0 0 0 1px #f5f5f5;
+    color: #555;
+    display: inline-block;
+    font: bold 12px Arial, Helvetica, Clean, sans-serif;
+    margin: 0 25px 25px 0;
+    padding: 10px 20px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #fafafa;
+    -webkit-animation: mymove 5s infinite;
+    animation: mymove 5s infinite;
+}
+    
+a.button:hover {
+    background: #e4e4e4;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#e4e4e4), to(#ededed));
+    background: -moz-linear-gradient(#e4e4e4, #ededed);
+    background: linear-gradient(#e4e4e4, #ededed);
+    border: solid 1px #c2c2c2;
+    border-bottom: solid 3px #b2b1b1;
+    box-shadow: inset 0 0 0 1px #efefef;
+}
+    
+a.button:active {
+    background: #dfdfdf;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#dfdfdf), to(#e3e3e3));
+    background: -moz-linear-gradient(#dfdfdf, #e3e3e3);
+    background: linear-gradient(#dfdfdf, #e3e3e3);
+    border: 1px solid #959595;
+    box-shadow: inset 0 10px 15px 0 #c4c4c4;
+    top:2px;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    50% {box-shadow: 10px 20px 30px blue;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    50% {box-shadow: 10px 20px 30px blue;}
+}
+/*
+==================
+End of button area one
+==================
+*/
