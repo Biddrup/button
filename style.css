@@ -3,82 +3,305 @@
 Begenning of button area one
 ==================
 */
-a.button::before {
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-box-shadow: #FECDFE 0 2px 5px;
-    -moz-box-shadow: #FECDFE 0 2px 5px;
-    border-radius: 3px;
-    box-shadow: #FECDFE 0 2px 5px;
-    width: 100%;
-    content: "";
-    display: block;
+#ballMenuContainer {
     position: absolute;
-    height: 100%;
-    top: 0;
-    left: 0;
-    padding: 2px 0 0;
-}
-    
-a.button:active::before {
-    padding: 1px 0 0;
+    right: 25px;
+    top:0;
 }
 
 
-a.button {
-    -moz-box-shadow: inset 0 0 0 1px #3DA3EF;
-    -webkit-box-shadow: inset 0 0 0 1px #3DA3EF;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    background: #66BE91;
-    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#eee), to(#e2e2e2));
-    background: -moz-linear-gradient(#66BE91, #e2e2e2);
-    background: linear-gradient(#66BE91, #e2e2e2);
-    border: solid 1px #d0d0d0;
-    border-bottom: solid 3px #b2b1b1;
-    border-radius: 3px;
-    box-shadow: inset 0 0 0 1px #f5f5f5;
-    color: #555;
-    display: inline-block;
-    font: bold 12px Arial, Helvetica, Clean, sans-serif;
-    margin: 0 25px 25px 0;
-    padding: 10px 20px;
+@-webkit-keyframes pulse {
+    0% {
+      -webkit-transform: scale(1) rotate(0deg); 
+    }
+    50% {
+      -webkit-transform: scale(1.1) rotate(-5deg); 
+    }
+    100% {
+      -webkit-transform: scale(1) rotate(0deg); 
+    }
+}
+@-o-keyframes pulse {
+    0% {
+      -o-transform: scale(1) rotate(0deg); 
+    }
+    50% {
+      -o-transform: scale(1.1) rotate(-5deg); 
+    }
+    100% {
+      -o-transform: scale(1) rotate(0deg); 
+    }
+}
+@-moz-keyframes pulse {
+    0% {
+      -moz-transform: scale(1) rotate(0deg); 
+    }
+    50% {
+      -moz-transform: scale(1.1) rotate(-5deg); 
+    }
+    100% {
+      -moz-transform: scale(1) rotate(0deg); 
+    }
+}
+@keyframes pulse {
+    0% {
+      transform: scale(1) rotate(0deg); 
+    }
+    50% {
+      transform: scale(1.1) rotate(-5deg); 
+    }
+    100% {
+      transform: scale(1) rotate(0deg); 
+    }
+}
+
+@-webkit-keyframes bump {
+  0% {
+      top: 0;
+  }
+  5% {
+      top: 3px;
+  }
+  10% {
+      top:0;
+  }
+  100% {
+      top:0;
+  }
+}
+@-o-keyframes bump {
+  0% {
+      top: 0;
+  }
+  5% {
+      top: 3px;
+  }
+  10% {
+      top:0;
+  }
+  100% {
+      top:0;
+  }
+}
+@-moz-keyframes bump {
+  0% {
+      top: 0;
+  }
+  5% {
+      top: 3px;
+  }
+  10% {
+      top:0;
+  }
+  100% {
+      top:0;
+  }
+}
+@keyframes bump {
+  0% {
+      top: 0;
+  }
+  5% {
+      top: 3px;
+  }
+  10% {
+      top:0;
+  }
+  100% {
+      top:0;
+  }
+}
+
+.menuBall {
     position: relative;
-    text-align: center;
-    text-decoration: none;
-    text-shadow: 0 1px 0 #fafafa;
-    -webkit-animation: mymove 5s infinite;
-    animation: mymove 5s infinite;
-}
-    
-a.button:hover {
-    background: #e4e4e4;
-    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#e4e4e4), to(#ededed));
-    background: -moz-linear-gradient(#e4e4e4, #ededed);
-    background: linear-gradient(#e4e4e4, #ededed);
-    border: solid 1px #c2c2c2;
-    border-bottom: solid 3px #b2b1b1;
-    box-shadow: inset 0 0 0 1px #efefef;
-}
-    
-a.button:active {
-    background: #dfdfdf;
-    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#dfdfdf), to(#e3e3e3));
-    background: -moz-linear-gradient(#dfdfdf, #e3e3e3);
-    background: linear-gradient(#dfdfdf, #e3e3e3);
-    border: 1px solid #959595;
-    box-shadow: inset 0 10px 15px 0 #c4c4c4;
-    top:2px;
-}
-/* Chrome, Safari, Opera */
-@-webkit-keyframes mymove {
-    50% {box-shadow: 10px 20px 30px blue;}
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    display: inline-block;
 }
 
-/* Standard syntax */
-@keyframes mymove {
-    50% {box-shadow: 10px 20px 30px blue;}
+.ball {
+    position:absolute;
+    width:100%;
+    height:100%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    border: 2px dashed #fff;
+    margin: 10px;
+    text-decoration: none;
 }
+
+.ball:hover {
+    -webkit-animation: pulse 1s ease 0s infinite normal;
+    -o-animation: pulse 1s ease 0s infinite normal;
+    -moz-animation: pulse 1s ease 0s infinite normal;
+    animation: pulse 1s ease 0s infinite normal;
+}
+
+.redball {
+    background-color: #d90e23;
+    -moz-box-shadow: 0 0 0 3px #d90e23, 2px 1px 4px 4px rgba(10,10,0,.5);
+    -webkit-box-shadow: 0 0 0 3px #d90e23, 2px 1px 4px 4px rgba(10,10,0,.5);
+    -o-box-shadow: 0 0 0 3px #d90e23, 2px 1px 4px 4px rgba(10,10,0,.5);
+    box-shadow: 0 0 0 3px #d90e23, 2px 1px 6px 4px rgba(10,10,0,.5);
+  
+    background-image: -moz-linear-gradient(0deg, rgba(0,0,0,.25) 50%, transparent 10%),-moz-linear-gradient(rgba(0,0,0,.25) 50%, transparent 50%);
+    background-image: -webkit-linear-gradient(0deg, rgba(0,0,0,.25) 50%, transparent 10%),-webkit-linear-gradient(rgba(0,0,0,.25) 50%, transparent 50%);
+    background-image: -o-linear-gradient(0deg, rgba(0,0,0,.25) 50%, transparent 10%),-o-linear-gradient(rgba(0,0,0,.25) 50%, transparent 50%);
+    background-size:10px 10px;
+}
+
+.blueball {
+    -moz-box-shadow: 0 0 0 3px #d6385b, 2px 1px 4px 4px rgba(10,10,0,.5);
+    -webkit-box-shadow: 0 0 0 3px #d6385b, 2px 1px 4px 4px rgba(10,10,0,.5);
+    -o-box-shadow: 0 0 0 3px #d6385b, 2px 1px 4px 4px rgba(10,10,0,.5);
+    box-shadow: 0 0 0 3px #d6385b, 2px 1px 6px 4px rgba(10,10,0,.5);
+
+    background-image: -webkit-linear-gradient(35deg, #9f2e86 25%, transparent 25%, transparent 75%, #9f2e86 75%, #9f2e86), 
+    -webkit-linear-gradient(-35deg, #9f2e86 25%, transparent 25%, transparent 75%, #9f2e86 75%, #9f2e86);
+    background-image: -moz-linear-gradient(35deg, #9f2e86 25%, transparent 25%, transparent 75%, #9f2e86 75%, #9f2e86), 
+    -moz-linear-gradient(-35deg, #9f2e86 25%, transparent 25%, transparent 75%, #9f2e86 75%, #9f2e86);
+    background-size:20px 20px;  
+    background-color: #d6385b;
+}
+
+.yellowball {
+    background-color: #7968a8;
+    -moz-box-shadow: 0 0 0 3px #7968a8, 2px 1px 4px 4px rgba(10,10,0,.5);
+    -webkit-box-shadow: 0 0 0 3px #7968a8, 2px 1px 4px 4px rgba(10,10,0,.5);
+    box-shadow: 0 0 0 3px #7968a8, 2px 1px 6px 4px rgba(10,10,0,.5);
+  
+    background-image: -webkit-linear-gradient(90deg, transparent 50%, rgba(99,138,190,1) 50%);
+    background-image: -moz-linear-gradient(90deg, transparent 50%, rgba(99,138,190,1) 50%);
+    background-size: 8px 8px;
+}
+
+.greenball {
+    -moz-box-shadow: 0 0 0 3px #65b37a, 2px 1px 4px 4px rgba(10,10,0,.5);
+    -webkit-box-shadow: 0 0 0 3px #65b37a, 2px 1px 4px 4px rgba(10,10,0,.5);
+    box-shadow: 0 0 0 3px #65b37a, 2px 1px 6px 4px rgba(10,10,0,.5);
+
+    background:
+        -webkit-radial-gradient(#e8b15e 4px, transparent 6px);
+    background:
+        -moz-radial-gradient(#e8b15e 4px, transparent 6px);
+    background-size: 20px 20px;
+  
+    background-image: -webkit-radial-gradient(#e8b15e 15%, transparent 16%),
+        -webkit-radial-gradient(#e8b15e 15%, transparent 16%);
+    background-image: -moz-radial-gradient(#e8b15e 15%, transparent 16%),
+        -moz-radial-gradient(#e8b15e 15%, transparent 16%);
+    background-color: #65b37a;
+    background-size:30px 30px;
+    background-position: 0 0, 20px 20px;
+}
+
+.menuText {
+    font-family: 'IdolwildRegular' , Verdana, Helvetica, Sans-Serif;
+    font-size: larger;
+    color: #ffffff;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+    top: 40%;
+}
+
+#menuBall1 {
+  -webkit-animation: bump 6s linear 0s infinite normal;
+}
+#menuBall2 {
+  -webkit-animation: bump 6s linear .5s infinite normal;
+}
+#menuBall3 {
+  -webkit-animation: bump 6s linear 1s infinite normal;
+}
+#menuBall4 {
+  -webkit-animation: bump 6s linear 1.5s infinite normal;
+}
+
+#menuBall1 {
+  -moz-animation: bump 6s linear 0s infinite normal;
+}
+#menuBall2 {
+  -moz-animation: bump 6s linear .5s infinite normal;
+}
+#menuBall3 {
+  -moz-animation: bump 6s linear 1s infinite normal;
+}
+#menuBall4 {
+  -moz-animation: bump 6s linear 1.5s infinite normal;
+}
+
+#menuBall1 {
+  -o-animation: bump 6s linear 0s infinite normal;
+}
+#menuBall2 {
+  -o-animation: bump 6s linear .5s infinite normal;
+}
+#menuBall3 {
+  -o-animation: bump 6s linear 1s infinite normal;
+}
+#menuBall4 {
+  -o-animation: bump 6s linear 1.5s infinite normal;
+}
+
+#menuBall1 {
+  animation: bump 6s linear 0s infinite normal;
+}
+#menuBall2 {
+  animation: bump 6s linear .5s infinite normal;
+}
+#menuBall3 {
+  animation: bump 6s linear 1s infinite normal;
+}
+#menuBall4 {
+  animation: bump 6s linear 1.5s infinite normal;
+}
+
+
+div#partyInfo {
+    position: absolute;
+    bottom: 30%;
+    top: 30%;
+    left: 20%;
+    right: 20%;
+    margin: 5px;
+    padding: 8px;
+    z-index: 2000;
+    text-shadow: -1px -1px #65b37a;
+    font-family: 'IdolwildRegular' , Verdana, Helvetica, Sans-Serif;
+    font-size: 2.5em;
+    color: #FFFFFF;
+    border-radius: 10px;
+    border: 2px dashed #fff;
+    background-color: #d90e23;
+    -moz-box-shadow: 0 0 0 3px #d90e23, 2px 1px 4px 4px rgba(10,10,0,.5);
+    -webkit-box-shadow: 0 0 0 3px #d90e23, 2px 1px 4px 4px rgba(10,10,0,.5);
+    -o-box-shadow: 0 0 0 3px #d90e23, 2px 1px 4px 4px rgba(10,10,0,.5);
+    box-shadow: 0 0 0 3px #d90e23, 2px 1px 6px 4px rgba(10,10,0,.5);
+}
+
+#darkMe {
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width: 100%;
+    background: rgba(0,0,0,0.65);
+    z-index: 1000;
+    -webkit-filter: blur(3px);
+}
+
+#darkMe.hideMe, #partyInfo.hideMe {
+    visibility: hidden;
+}
+
+#darkMe.showMe, #partyInfo.showMe{
+    visibility:visible;
+}
+
 /*
 ==================
 End of button area one
